@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Mad Level 1 Task 1</string>
+    <string name="tvInstruction">Guess if the next throw is going to be lower, equal or higher.</string>
+    <string name="btLower">Lower</string>
+    <string name="btEquals">Equals</string>
+    <string name="btHigher">Higher</string>
+    <string name="dice">Dice</string>
+    <string name="correct">Correct</string>
+    <string name="incorrect">incorrect</string>
+    <string name="tvLast_trow">Last Throw: %d</string>
+</resources>
