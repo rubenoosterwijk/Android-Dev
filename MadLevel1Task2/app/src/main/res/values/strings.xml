@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">MadLevel1Task2</string>
+    <string name="tvInstruction">Conjunction (AND)</string>
+    <string name="btSubmit">Submit</string>
+    <string name="tvA">A</string>
+    <string name="tvB">B</string>
+    <string name="tvAB">A ^ B</string>
+    <string name="tvT">T</string>
+    <string name="tvF">F</string>
+    <string name="etAnswer"> </string>
 </resources>
