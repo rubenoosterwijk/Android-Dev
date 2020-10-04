@@ -2,3 +2,11 @@
 	url = https://github.com/rubenoosterwijk/MadLevel1Example
 [submodule "MadLevel1Task1"]
 	url = https://github.com/rubenoosterwijk/MadLevel1Task1
+[submodule "MadLevel1Task2"]
+	url = https://github.com/rubenoosterwijk/MadLevel1Task1
+[submodule "MadLevel2Example"]
+	url = https://github.com/rubenoosterwijk/MadLevel2Example
+[submodule "MadLevel2Task1"]
+	url = https://github.com/rubenoosterwijk/MadLevel2Task1
+[submodule "MadLevel2Task2"]
+	url = https://github.com/rubenoosterwijk/MadLevel2Task2
