@@ -1,0 +1,38 @@
+Which stages of an activity lifecycle exists?
+onCreate(), onStart(), onResume(), onPause(), onStop(), and onDestroy().
+https://developer.android.com/guide/components/images/activity_lifecycle.png
+
+
+Which are the two kind of intents, and what is the difference?
+
+Common Intents:
+An intent allows you to start an activity in another app by describing a simple action you'd like to perform (such as "view a map" or "take a picture") in an Intent object. 
+This type of intent is called an implicit intent because it does not specify the app component to start, but instead specifies an action and provides some data with which to perform the action.
+https://developer.android.com/guide/components/intents-common
+
+An intent is an abstract description of an operation to be performed. 
+It can be used with Context#startActivity(Intent) to launch an Activity, broadcastIntent to send it to any interested BroadcastReceiver components, 
+and Context.startService(Intent) or Context.bindService(Intent, ServiceConnection, int) to communicate with a background Service.
+https://developer.android.com/reference/android/content/Intent
+
+
+
+What is the difference between Parcelables and Serializables?
+
+Parcelable and Serialization are used for marshaling and unmarshaling Java objects.
+Parcelable is well documented in the Android SDK; serialization on the other hand is available in Java. It is for this very reason that Android developers prefer Parcelable over the Serialization technique.
+· In Parcelable, developers write custom code for marshaling and unmarshaling so it creates less garbage objects in comparison to Serialization. The performance of Parcelable over Serialization dramatically improves (around two times faster), because of this custom implementation.
+· Serialization is a marker interface, which implies the user cannot marshal the data according to their requirements. In Serialization, a marshaling operation is performed on a Java Virtual Machine (JVM) using the Java reflection API. This helps identify the Java objects member and behavior, but also ends up creating a lot of garbage objects.
+Due to this, the Serialization process is slow in comparison to Parcelable. 
+
+What is the purpose of the analyzer?
+Android Studio includes an APK Analyzer that provides immediate insight into the composition of your APK after the build process completes. 
+Using the APK Analyzer can reduce the time you spend debugging issues with DEX files and resources within your app, and help reduce your APK size. 
+It's also available from the command line with apkanalyzer.
+
+With the APK Analyzer, you can accomplish the following:
+
+    View the absolute and relative size of files in the APK, such as the DEX and Android resource files.
+    Understand the composition of DEX files.
+    Quickly view the final versions of files in the APK, such as the AndroidManifest.xml file.
+    Perform a side-by-side comparison of two APKs.
