@@ -1,0 +1,122 @@
+What is the difference of a staggered grid comparing to a normal grid?
+
+Grid View:
+It is is a ViewGroup that displays items in a two-dimensional, scrollable grid. 
+In this each Grid is of same size (Height and width). Grid View shows symmetric items in view.
+
+Staggered Grid View:
+It is basically an extension to Grid View but in this each Grid is of varying size(Height and width). 
+Staggered Grid View shows asymmetric items in view.
+
+
+
+What is the purpose of logcat?
+The Logcat window in Android Studio displays system messages, such as when a garbage collection occurs, and messages that you added to your app with the Log class. 
+It displays messages in real time and keeps a history so you can view older messages.
+
+
+
+What kind of gestures are available?
+Common: scrolling, flinging, and double-tapping using GestureDetector. 
+Track touch and pointer movements
+Handle multi-touch gestures
+Drag and scale
+
+
+
+What was the predecessor of the recyclerview?
+Listview
+
+
+
+What is the difference between a Toast and Snackbar ?
+Snackbars provide lightweight feedback about an operation in a small popup at the base of the screen on mobile and at the lower left on desktop. They are above all over elements on screen, including the FAB.
+Toast:
+
+    Toast was added in API Level 1
+    Basically Activity is not required (Can be shown on Android home or even above other apps)
+    It can’t perform an action based on User input
+    It can’t be dismissed by swiping
+    It can’t handle user input like Swipe, Click etc.
+    Good for showing info messages to user
+
+SnackBar:
+
+    SnackBar was added in API Level 23
+    It can be showed inside an activity of the Applications
+    It can perform an action
+    It can be dismissed by swiping
+    It can handle user input
+    Good for showing warning/info type messages to user that needs attention
+
+Usage of SnackBar and Toast:
+SnackBar:
+SnackBar can be used in the areas where a simple popup message needs to be displayed along with an option to perform action. 
+For Example: 
+In GMail application, when you delete Mail, quick SnackBar display at the bottom with Message ‘1 Deleted’ with an action button ‘Undo’. On pressing the ‘Undo’ action button, the deleted mail will be restored.
+
+Toast:
+Toast can be used in the areas where System messages need to be displayed.
+For Example:
+When your App tries to download JSON from remote server but it fails due to Server Timeout or No resource found, you just need to display the error message saying that ‘Error Occurred’. 
+But understand the Toast message cannot be dismissed by swiping. If you still want to have the capability of dismissing it in your App, go for SnackBar.
+
+Android also provides a capsule-shaped toast, primarily used for system messaging. Toasts are similar to snackbars but do not contain actions and cannot be swiped off screen.
+
+
+
+What is the purpose of the existence of “optionals” (represented by the “?” mark) in the Kotlin language? And what does the “!!” mark mean?
+Quick answer: Null Safety. https://kotlinlang.org/docs/reference/null-safety.html
+
+In Kotlin, the type system distinguishes between references that can hold null (nullable references) and those that can not (non-null references). 
+
+For example, a regular variable of type String can not hold null:
+	var a: String = "abc" // Regular initialization means non-null by default
+	a = null // compilation error
+
+To allow nulls, we can declare a variable as nullable string, written String?:
+	var b: String? = "abc" // can be set null
+	b = null // ok
+	print(b)
+
+Save Calls: "?."
+
+
+If the expression to the left of ?: is not null, the elvis operator returns it, otherwise it returns the expression to the right. Note that the right-hand side expression is evaluated only if the left-hand side is null.
+Note that, since throw and return are expressions in Kotlin, they can also be used on the right hand side of the elvis operator. 
+
+This can be very handy, for example, for checking function arguments:
+fun foo(node: Node): String? {
+    val parent = node.getParent() ?: return null
+
+    val name = node.getName() ?: throw IllegalArgumentException("name expected")
+
+    // ...
+}
+
+The not-null assertion operator (!!) converts any value to a non-null type and throws an exception if the value is null. 
+We can write b!!, and this will return a non-null value of b (e.g., a String in our example) or throw an NPE if b is null:
+
+val l = b!!.length
+
+
+
+What is the purpose of a “data class” in Kotlin?
+Frequently - especially if you want a complex return type from a function or a complex key for a map - you'll want a quick and dirty class which only contains some properties, 
+but is still comparable for equality and is usable as a map key. 
+If you create a data class, you'll get automatic implementations of the following functions: 
+	toString() (which will produce a string containing all the property names and values) 
+	equals() (which will do a per-property equals())	
+	hashCode() (which will hash the individual properties and combine the hashes)
+	the functions that are required to enable Kotlin to destructure an instance of the class into a declaration (component1(), component2(), etc.):
+
+
+
+What is a “companion object” in Kotlin? Explain the difference (if any) with a “static final” and with a “val”, and when to use which constant type.
+If you need a function or a property to be tied to a class rather than to instances of it (similar to @staticmethod in Python)
+https://stackoverflow.com/questions/40352879/what-is-the-equivalent-of-java-static-final-fields-in-kotlin
+
+
+
+Explain what “StaggeredGridLayout” is.
+StaggeredGridLayout is a LayoutManager, it is just like a GridView but in this grid each view have its own size (height and width). It supports both vertical and horizontal layouts.
