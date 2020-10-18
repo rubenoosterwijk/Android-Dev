@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MadLevel3Task2</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+
+    <string name="btn_add">ADD PORTAL</string>
+    <string name="title">Title</string>
+    <string name="url">URL</string>
+    <string name="http">https://</string>
+    <string name="reminders">My Portals</string>
+    <string name="invalid_portal">Portal not valid</string>
+
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+</resources>
