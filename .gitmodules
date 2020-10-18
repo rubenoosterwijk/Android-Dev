@@ -14,3 +14,5 @@
 	url = https://github.com/rubenoosterwijk/MadLevel3Example
 [submodule "MadLevel3Task1"]
 	url = https://github.com/rubenoosterwijk/MadLevel3Task1
+[submodule "MadLevel3Task2"]
+	url = https://github.com/rubenoosterwijk/MadLevel3Task2
