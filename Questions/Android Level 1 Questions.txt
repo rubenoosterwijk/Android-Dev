@@ -1,0 +1,50 @@
+What are the names of the latest three versions of Android?
+Android 9 Pie, Android 10 (API29), Android 11 (API30)
+
+What does the abbreviation ART stand for?
+Android Runtime (ART) is an application runtime environment used by the Android operating system.
+ART performs the translation of the application's bytecode into native instructions that are later executed by the device's runtime environment.
+
+What is Android Jetpack?
+Jetpack is a suite of libraries to help developers follow best practices, reduce boilerplate code,
+and write code that works consistently across Android versions and devices so that developers can focus on the code they care about.
+
+Describe the difference between the fixed, wrap_content and match_constraint setting of the constraint layout?
+fixed = https://developer.android.com/reference/androidx/constraintlayout/widget/ConstraintLayout#widgets-dimension-constraints
+wrap_content = https://developer.android.com/reference/androidx/constraintlayout/widget/ConstraintLayout#wrap_content-:-enforcing-constraints-added-in-1.1
+match_constraint = https://developer.android.com/reference/androidx/constraintlayout/widget/ConstraintLayout#match_constraint-dimensions-added-in-1.1
+
+What does the abbreviation DP stand for and why do we need them?
+dp or dip
+Density-independent Pixels - An abstract unit that is based on the physical density of the screen.
+These units are relative to a 160 dpi (dots per inch) screen, on which 1dp is roughly equal to 1px.
+When running on a higher density screen, the number of pixels used to draw 1dp is scaled up by a factor appropriate for the screen's dpi.
+Likewise, when on a lower density screen, the number of pixels used for 1dp is scaled down.
+The ratio of dp-to-pixel wi necessarily in direct proportion. Using dp units (instead of px units) is a simple solution to making the view dimensions in your layout resize properly for different screen densities.
+In other words, it provides consistency for the real-world sizes of your UI elements across different devices.
+
+What is the purpose of the string.xml file?
+A string resource provides text strings for your application with optional text styling and formatting.
+There are three types of resources that can provide your application with strings:
+String
+    XML resource that provides a single string.
+String Array
+    XML resource that provides an array of strings.
+Quantity Strings (Plurals)
+    XML resource that carries different strings for pluralization.
+
+Why is the layout in Android specified by .xml files?  Why not just have the layout in the code (Kotlin or Java)?
+Resources are the additional files and static content that your code uses, such as bitmaps, layout definitions, user interface strings, animation instructions, and more.
+
+You should always externalize app resources such as images and strings from your code, so that you can maintain them independently.
+You should also provide alternative resources for specific device configurations, by grouping them in specially-named resource directories.
+At runtime, Android uses the appropriate resource based on the current configuration. For example, you might want to provide a different UI layout depending on the screen size or different strings depending on the language setting.
+
+What kind of information can be found in the manifest file?
+Every app project must have an AndroidManifest.xml file (with precisely that name) at the root of the project source set.
+The manifest file describes essential information about your app to the Android build tools, the Android operating system, and Google Play.
+
+What is the purpose of view binding in Android?
+View binding is a feature that allows you to more easily write code that interacts with views.
+Once view binding is enabled in a module, it generates a binding class for each XML layout file present in that module.
+An instance of a binding class contains direct references to all views that have an ID in the corresponding layout.
