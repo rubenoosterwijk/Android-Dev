@@ -1,0 +1,33 @@
+A singleton pattern is used in the class that defines the database. What is the purpose of this pattern?
+The Singleton Pattern is a software design pattern that guarantees a class has one instance only and a global point of access to it is provided by that class. 
+Anytime multiple classes or clients request for that class, they get the same instance of the class. This Singleton class may be responsible for instantiating itself, or you can delegate the object creation to a factory class.
+https://code.tutsplus.com/tutorials/android-design-patterns-the-singleton-pattern--cms-29153
+
+
+
+Why should you load the data in a background thread?
+In general, any task that takes more than a few milliseconds should be delegated to a background thread. 
+Common long-running tasks include things like decoding a bitmap, accessing storage, working on a machine learning (ML) model, or performing network requests
+
+
+
+What are the three major components of ROOM and what are their responsibilities?
+
+Database: Contains the database holder and serves as the main access point for the underlying connection to your app's persisted, relational data.
+
+    The class that's annotated with @Database should satisfy the following conditions:
+        Be an abstract class that extends RoomDatabase.
+        Include the list of entities associated with the database within the annotation.
+        Contain an abstract method that has 0 arguments and returns the class that is annotated with @Dao.
+
+At runtime, you can acquire an instance of Database by calling Room.databaseBuilder() or Room.inMemoryDatabaseBuilder().
+
+Entity: Represents a table within the database.
+
+DAO: Contains the methods used for accessing the database.
+https://developer.android.com/images/training/data-storage/room_architecture.png
+
+
+
+How can you extract the current database so that you can see the table, columns, and data?
+https://developer.android.com/training/search/search
