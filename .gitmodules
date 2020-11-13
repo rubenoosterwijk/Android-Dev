@@ -16,9 +16,6 @@
 	url = https://github.com/rubenoosterwijk/MadLevel3Task1
 [submodule "MadLevel3Task2"]
 	url = https://github.com/rubenoosterwijk/MadLevel3Task2
-[submodule "MadLevel4Task1"]
-	path = MadLevel4Task1
-	url = https://github.com/rubenoosterwijk/MadLevel4Task1
 [submodule "MadLevel4Example"]
 	path = MadLevel4Example
 	url = https://github.com/rubenoosterwijk/MadLevel4Example
