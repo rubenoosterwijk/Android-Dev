@@ -1,0 +1,16 @@
+
+What are the parts that Android Architecture Components consist of?
+Activity/Fragment, Viewmodel with livedata, repository and models
+
+Which design principle is followed by the Android Architecture Components?
+
+Android architecture components are a collection of libraries that help you design robust, testable, and maintainable apps.
+
+What is the purpose of LiveData?
+LiveData is an observable data holder class. Unlike a regular observable, LiveData is lifecycle-aware, meaning it respects the lifecycle of other app components, such as activities, fragments, or services. 
+This awareness ensures LiveData only updates app component observers that are in an active lifecycle state.
+
+What is the purpose of a ViewModel?
+The ViewModel class is designed to store and manage UI-related data in a lifecycle conscious way. The ViewModel class allows data to survive configuration changes such as screen rotations.
+
+
